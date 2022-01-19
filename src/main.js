@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import User from './components/User'
+import PageNotFound from './components/PageNotFound'
 Vue.use(VueRouter)
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
   {
     path:'/user/:id',
     component: User
+  },
+  {
+    path:'*',
+    component: PageNotFound
   }
 ]
 const router = new VueRouter({
